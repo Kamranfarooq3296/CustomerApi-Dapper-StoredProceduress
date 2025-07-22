@@ -4,11 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 
 [Route("api/[controller]")]
 [ApiController]
-public class EmployeeController : ControllerBase
+public class CustomerController : ControllerBase
 {
     private readonly IDbServices _db;
 
-    public EmployeeController(IDbServices db)
+    public CustomerController(IDbServices db)
     {
         _db = db;
     }

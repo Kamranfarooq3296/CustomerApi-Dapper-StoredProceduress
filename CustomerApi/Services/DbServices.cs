@@ -15,13 +15,14 @@ public class DbServices : IDbServices
         _config = config;
     }
 
-    // Helper method to create and open a connection
     private IDbConnection CreateConnection()
     {
         var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
         connection.Open();
         return connection;
     }
+
+
 
     public async Task<T> GetAsync<T>(string command, object parms)
     {
