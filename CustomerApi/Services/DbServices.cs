@@ -1,9 +1,9 @@
 ﻿using CustomerApi.IServices;
 using Dapper;
-using Microsoft.Extensions.Configuration;  // For IConfiguration
+using Microsoft.Extensions.Configuration;  
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;               // For SqlConnection
+using System.Data.SqlClient;               
 using System.Threading.Tasks;
 
 public class DbServices : IDbServices

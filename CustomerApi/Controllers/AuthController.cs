@@ -2,6 +2,8 @@
 using CustomerApi.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+
+
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -46,7 +48,7 @@ namespace CustomerApi.Controllers
                 issuer: _configuration["Jwt:Issuer"],
                 audience: _configuration["Jwt:Audience"],
                 claims: claims,
-                expires: DateTime.UtcNow.AddHours(),
+                expires: DateTime.UtcNow.AddHours(2),
                 signingCredentials: creds
             );
 
